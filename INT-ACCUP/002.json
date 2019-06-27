@@ -1,0 +1,42 @@
+{
+  "tcID":"INT-ACCUP-002",
+  "tcName":"FailKey",
+  "test":[
+    {
+      "tx": {
+        "type": "VALUE_TRANSFER",
+        "to": "random",
+        "value": "1000000000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key" : {},
+          "keyType" : 3
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "api":{
+        "method":"klay_getAccountKey",
+        "params":["random", "latest"]
+      },
+      "expected": {
+        "key": {},
+        "keyType": 3
+      }
+    }
+  ]
+}

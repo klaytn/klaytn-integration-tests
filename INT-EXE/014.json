@@ -1,0 +1,49 @@
+{
+  "tcID": "INT-EXE-014",
+  "tcName": "ToEOA",
+  "test": [
+    {
+      "tx": {
+        "type": "VALUE_TRANSFER",
+        "to": "random",
+        "value": "1000000000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key" : {
+            "x": "0xc8abd8e081c430de0bd0b8ad0971698773f1f4d3cbe175087556cc0a83007a2c",
+            "y": "0x9e9888c032e5f0ee64b8e76ee34c2b6c54e7264ee01419632e00d03fb39392d0"
+          },
+          "keyType" : 2
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "SMART_CONTRACT_EXECUTION",
+        "to": "random",
+        "value": "0x0",
+        "gas": 100000,
+        "data": ""
+      },
+      "expected": {
+        "status": false,
+        "errorString": "not a program account (e.g., an account having code and storage)"
+      }
+    }
+  ]
+}
+

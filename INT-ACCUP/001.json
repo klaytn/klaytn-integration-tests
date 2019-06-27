@@ -1,0 +1,34 @@
+{
+  "tcID":"INT-ACCUP-001",
+  "tcName":"NilKey",
+  "test":[
+    {
+      "tx": {
+        "type": "VALUE_TRANSFER",
+        "to": "random",
+        "value": "1000000000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key" : {},
+          "keyType" : 0
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": false,
+        "errorStringJs": "Missing key information with ACCOUNT_UPDATE transaction",
+        "errorString":"AccountKeyNil cannot be initialized to an account"
+      }
+    }
+  ]
+}

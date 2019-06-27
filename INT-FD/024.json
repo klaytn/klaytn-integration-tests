@@ -1,0 +1,29 @@
+{
+  "tcID": "INT-FD-024",
+  "tcName": "(Cancel) InsufficientBalanceFeePayer",
+  "test": [
+    {
+      "tx": {
+        "type": "LEGACY",
+        "to": "random",
+        "value": "0x1",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "FEE_DELEGATED_CANCEL",
+        "feePayer": "random",
+        "feePayerPrivateKey": "random.privateKey",
+        "gas": 100000
+      },
+      "expected": {
+        "status": false,
+        "errorString": "insufficient funds of the fee payer for gas * price"
+      }
+    }
+  ]
+}

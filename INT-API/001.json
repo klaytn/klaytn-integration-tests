@@ -1,0 +1,24 @@
+{
+  "tcID":"INT-API-001",
+  "tcName":"klay_accountCreated_RPC",
+  "test":[
+    {
+      "tx": {
+        "type":"LEGACY",
+        "to": "random",
+        "value": "0x1",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "api":{
+        "method":"klay_accountCreated",
+        "params":["random", "latest"]
+      },
+      "expected": true
+    }
+  ]
+}

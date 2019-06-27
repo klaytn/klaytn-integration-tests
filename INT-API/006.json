@@ -1,0 +1,26 @@
+{
+  "tcID":"INT-API-006",
+  "tcName":"klay_getCode_RPC",
+  "test":[
+    {
+      "tx": {
+        "type": "SMART_CONTRACT_DEPLOY",
+        "gas": 1000000,
+        "codeFormat": 0,
+        "value":"0x0",
+        "data": ""
+      },
+      "deployedAddress": "contract",
+      "expected":{
+        "status":true
+      }
+    },
+    {
+      "api":{
+        "method":"klay_getCode",
+        "params":["contract", "latest"]
+      },
+      "expected": "0x"
+    }
+  ]
+}

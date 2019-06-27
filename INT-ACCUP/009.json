@@ -1,0 +1,35 @@
+{
+  "tcID":"INT-ACCUP-009",
+  "tcName":"WeightedMultisigTooShort",
+  "test":[
+    {
+      "tx": {
+        "type": "VALUE_TRANSFER",
+        "to": "random",
+        "value": "1000000000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "keyType": 4,
+          "key": {
+            "threshold": 2
+          }
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": false,
+        "errorString":"length is zero"
+      }
+    }
+  ]
+}

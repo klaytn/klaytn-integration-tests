@@ -1,0 +1,21 @@
+{
+  "tcID": "INT-FD-028",
+  "tcName": "(SmartContractDeploy) SufficientBalanceOfFeePayer",
+  "test": [
+    {
+      "tx": {
+        "type": "FEE_DELEGATED_SMART_CONTRACT_DEPLOY",
+        "gas": 1000000,
+        "codeFormat": 0,
+        "value":"0x0",
+        "data": ""
+      },
+      "expected": {
+        "status": true,
+        "receipt": {
+          "status": true
+        }
+      }
+    }
+  ]
+}

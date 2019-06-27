@@ -1,0 +1,37 @@
+{
+  "tcID":"INT-FDR-053",
+  "tcName":"(AccountUpdate) HighFeeRatio",
+  "test":[
+    {
+      "tx": {
+        "type": "LEGACY",
+        "to": "random",
+        "value": "0x100000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "FEE_DELEGATED_ACCOUNT_UPDATE_WITH_RATIO",
+        "from": "random",
+        "gas": 1000000,
+        "feeRatio": 100,
+        "accountKey": {
+          "key" : {
+            "x": "0x59eefb3557c29d2ffd05fff6ff53637441b1febea15f135c835e53e2f1fc5654",
+            "y": "0x4bba89006cae7ddc66a18834e33b595f477f51377b1ba82e48ea5b772fe16b5f"
+          },
+          "keyType" : 2
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": false,
+        "errorString":"fee ratio is out of range [1, 99]"
+      }
+    }
+  ]
+}

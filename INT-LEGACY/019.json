@@ -1,0 +1,50 @@
+{
+  "tcID":"INT-LEGACY-019",
+  "tcName":"FromDecoupled",
+  "test":[
+    {
+      "tx": {
+        "type": "VALUE_TRANSFER",
+        "to": "random",
+        "value": "1000000000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key" : {
+            "x": "0xc8abd8e081c430de0bd0b8ad0971698773f1f4d3cbe175087556cc0a83007a2c",
+            "y": "0x9e9888c032e5f0ee64b8e76ee34c2b6c54e7264ee01419632e00d03fb39392d0"
+          },
+          "keyType" : 2
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx":{
+        "type":"LEGACY",
+        "to":"0x18fd72128ae95d0c72dc1301db27371cb22cd006",
+        "value":"0x1",
+        "gas":100000,
+        "data":"",
+        "privateKey":"random.privateKey"
+      },
+      "expected":{
+        "status":false,
+        "errorString":"a legacy transaction must be with a legacy account key"
+      }
+    }
+  ]
+}
+

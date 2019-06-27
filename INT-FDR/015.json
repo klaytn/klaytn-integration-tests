@@ -1,0 +1,53 @@
+{
+  "tcID":"INT-FDR-015",
+  "tcName":"(AccountUpdate) LowNonce",
+  "test":[
+    {
+      "tx": {
+        "type": "LEGACY",
+        "to": "random",
+        "value": "0x100000000000000",
+        "gas": 1000000
+      },
+      "expected": {
+        "status": true
+      }
+    },
+    {
+      "tx": {
+        "type": "ACCOUNT_UPDATE",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key": {
+            "x": "0xf1966adb02f78d9de7bd5a4d171a2983396a9cc53b3db9f051f7c8fadc49fdb4",
+            "y": "0xc9e0668413ac63330e71d9eaba6d7be886e98d292c4b0b2575e6936203758c6c"
+          },
+          "keyType": 2
+        },
+        "privateKey": "random.privateKey"
+      },
+      "expected": {
+        "status":true
+      }
+    },
+    {
+      "tx": {
+        "type": "FEE_DELEGATED_ACCOUNT_UPDATE_WITH_RATIO",
+        "from": "random",
+        "gas": 1000000,
+        "accountKey": {
+          "key" : {},
+          "keyType" : 3
+        },
+        "nonce": 0,
+        "privateKey": "0xd7caceb18e704995a4a8bd0c09736d58cb33b3aa3953a22357528350b21c5df8",
+        "feeRatio": 20
+      },
+      "expected": {
+        "status": false,
+        "errorString": "nonce too low"
+      }
+    }
+  ]
+}
