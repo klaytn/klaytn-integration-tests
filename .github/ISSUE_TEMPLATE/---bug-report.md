@@ -20,7 +20,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add data, logs or screenshots to help explain your problem.
 
 **Environment (please complete the following information)**
- - OS and its version [e.g. macOS/10.14]
+ - The version of the Klaytn node that you sent an RPC request. [e.g., klaytn@v1.0.0]
+ - The version of SDK you used. [e.g., caver-js@v1.0.0 or caver-java@v1.0.0]
+ - OS and its version [e.g., macOS/10.14]
 
 **Additional context**
 Add any other context about the problem here.
