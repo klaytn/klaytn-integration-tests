@@ -9,7 +9,6 @@
         "value":"1000000000000000000",
         "gas":100000,
         "data":"",
-        "privateKey":"2fa38851e4b88c1c4e7ccbc8131c75523edb574442c206c8bd8fb7f8042fe255",
         "v":"0x1234"
       },
       "expected":{
