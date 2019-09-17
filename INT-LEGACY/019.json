@@ -42,6 +42,7 @@
       },
       "expected":{
         "status":false,
+	"errorStringJs":"A legacy transaction must be with a legacy account key",
         "errorString":"a legacy transaction must be with a legacy account key"
       }
     }
