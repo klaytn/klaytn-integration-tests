@@ -1,6 +1,7 @@
 {
   "tcID": "INT-API-045",
   "tcName": "klay_writeThroughCaching_RPC",
+  "skipJs":true,
   "test": [
     {
       "api": {
