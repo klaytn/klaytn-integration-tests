@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.11;
 
 import "./IERC721Enumerable.sol";
 import "./ERC721.sol";

@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.11;
 
 /**
  * @title ERC1820 Pseudo-introspection Registry Contract

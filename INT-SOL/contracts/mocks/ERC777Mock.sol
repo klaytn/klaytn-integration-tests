@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.11;
 
 import "../token/ERC777/ERC777.sol";
 

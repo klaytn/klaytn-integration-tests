@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.11;
 
 import "../token/ERC20/IERC20.sol";
 import "../crowdsale/validation/CappedCrowdsale.sol";

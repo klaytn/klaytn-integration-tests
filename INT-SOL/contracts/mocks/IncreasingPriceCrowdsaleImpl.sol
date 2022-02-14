@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.11;
 
 import "../crowdsale/price/IncreasingPriceCrowdsale.sol";
 import "../math/SafeMath.sol";
