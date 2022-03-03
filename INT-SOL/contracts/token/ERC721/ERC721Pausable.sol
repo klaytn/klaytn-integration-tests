@@ -10,15 +10,15 @@ import "../../lifecycle/Pausable.sol";
  * @dev ERC721 modified with pausable transfers.
  */
 contract ERC721Pausable is ERC721, Pausable {
-    function approve(address to, uint256 tokenId) public whenNotPaused {
+    function approve(address to, uint256 tokenId) override public whenNotPaused {
         super.approve(to, tokenId);
     }
 
-    function setApprovalForAll(address to, bool approved) public whenNotPaused {
+    function setApprovalForAll(address to, bool approved) override public whenNotPaused {
         super.setApprovalForAll(to, approved);
     }
 
-    function transferFrom(address from, address to, uint256 tokenId) public whenNotPaused {
+    function transferFrom(address from, address to, uint256 tokenId) override public whenNotPaused {
         super.transferFrom(from, to, tokenId);
     }
 }

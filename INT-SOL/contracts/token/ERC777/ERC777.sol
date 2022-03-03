@@ -107,7 +107,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param to The address to transfer to.
      * @param value The amount to be transferred.
      */
-    function transfer(address to, uint256 value) external returns (bool) {
+    function transfer(address to, uint256 value) override external returns (bool) {
         _transfer(msg.sender, msg.sender, to, value);
         return true;
     }
@@ -122,7 +122,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param to address The address which you want to transfer to
      * @param value uint256 the amount of tokens to be transferred
      */
-    function transferFrom(address from, address to, uint256 value) external returns (bool) {
+    function transferFrom(address from, address to, uint256 value) override external returns (bool) {
         _transfer(msg.sender, from, to, value);
         _approve(from, msg.sender, _allowances[from][msg.sender].sub(value));
         return true;
@@ -133,7 +133,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param amount uint256 amount of tokens to transfer
      * @param data bytes extra information provided by the token holder
      */
-    function burn(uint256 amount, bytes calldata data) external {
+    function burn(uint256 amount, bytes calldata data) override external {
         _burn(msg.sender, msg.sender, amount, data, "");
     }
 
@@ -191,7 +191,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param spender The address which will spend the funds.
      * @param value The amount of tokens to be spent.
      */
-    function approve(address spender, uint256 value) external returns (bool) {
+    function approve(address spender, uint256 value) override external returns (bool) {
         _approve(msg.sender, spender, value);
         return true;
     }
@@ -199,7 +199,7 @@ contract ERC777 is IERC777, IERC20 {
     /**
      * @dev Total number of tokens in existence
      */
-    function totalSupply() public view returns (uint256) {
+    function totalSupply() override public view returns (uint256) {
         return _totalSupply;
     }
 
@@ -208,7 +208,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param tokenHolder The address to query the balance of.
         * @return uint256 representing the amount owned by the specified address.
      */
-    function balanceOf(address tokenHolder) public view returns (uint256) {
+    function balanceOf(address tokenHolder) override public view returns (uint256) {
         return _balances[tokenHolder];
     }
 
@@ -274,7 +274,7 @@ contract ERC777 is IERC777, IERC20 {
      * @param spender address The address which will spend the funds.
      * @return A uint256 specifying the amount of tokens still available for the spender.
      */
-    function allowance(address owner, address spender) public view returns (uint256) {
+    function allowance(address owner, address spender) override public view returns (uint256) {
         return _allowances[owner][spender];
     }
 
