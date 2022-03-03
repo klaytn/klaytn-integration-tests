@@ -103,7 +103,7 @@
       "send":{
         "from":"randomOperator",
         "to":"ERC721Mock",
-        "gas":100000,
+        "gas":200000,
         "method":"safeTransferFrom(address,address,uint256,bytes)",
         "params":["randomOwner", "ERC721ReceiverMock", "1", "0x42"]
       },
