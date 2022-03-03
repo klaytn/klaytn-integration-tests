@@ -18,7 +18,7 @@ contract SimpleToken is ERC20, ERC20Detailed {
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor () public ERC20Detailed("SimpleToken", "SIM", DECIMALS) {
+    constructor () ERC20Detailed("SimpleToken", "SIM", DECIMALS) {
         _mint(msg.sender, INITIAL_SUPPLY);
     }
 }

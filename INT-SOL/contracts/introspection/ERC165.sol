@@ -24,7 +24,7 @@ contract ERC165 is IERC165 {
      * @dev A contract implementing SupportsInterfaceWithLookup
      * implements ERC165 itself.
      */
-    constructor () internal {
+    constructor () {
         _registerInterface(_INTERFACE_ID_ERC165);
     }
 

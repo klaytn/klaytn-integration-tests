@@ -6,7 +6,7 @@ import "../payment/PullPayment.sol";
 
 // mock class using PullPayment
 contract PullPaymentMock is PullPayment {
-    constructor () public payable {
+    constructor () payable {
         // solhint-disable-previous-line no-empty-blocks
     }
 

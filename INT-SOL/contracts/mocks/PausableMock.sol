@@ -10,7 +10,7 @@ contract PausableMock is Pausable, PauserRoleMock {
     bool public drasticMeasureTaken;
     uint256 public count;
 
-    constructor () public {
+    constructor () {
         drasticMeasureTaken = false;
         count = 0;
     }
