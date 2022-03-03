@@ -7,7 +7,7 @@ pragma solidity ^0.8.11;
  * @dev Interface for any contract that wants to support safeTransfers
  * from ERC721 asset contracts.
  */
-contract IERC721Receiver {
+abstract contract IERC721Receiver {
     /**
      * @notice Handle the receipt of an NFT
      * @dev The ERC721 smart contract calls this function on the recipient
