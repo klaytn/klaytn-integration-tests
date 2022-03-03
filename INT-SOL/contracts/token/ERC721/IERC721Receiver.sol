@@ -23,5 +23,5 @@ abstract contract IERC721Receiver {
      * @return bytes4 `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`
      */
     function onERC721Received(address operator, address from, uint256 tokenId, bytes memory data)
-    public returns (bytes4);
+    virtual public returns (bytes4);
 }
