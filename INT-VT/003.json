@@ -12,7 +12,7 @@
       },
       "expected":{
         "status":false,
-        "errorString":"invalid unit price"
+        "errorString":"invalid gas price. It must be set to value greater than or equal to baseFee"
       }
     }
   ]
