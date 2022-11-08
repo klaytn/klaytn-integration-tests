@@ -54,7 +54,7 @@
       },
       "expected":{
         "status":false,
-        "errorString":"evm: execution reverted",
+        "errorString":"execution reverted",
         "errorStringJava": "Empty value (0x) returned from contract"
       }
     }
