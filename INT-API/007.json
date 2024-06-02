@@ -6,7 +6,7 @@
       "tx": {
         "type": "LEGACY",
         "to": "random",
-        "value": "0x2000000000000",
+        "value": "0x20000000000000",
         "gas": 1000000
       },
       "expected": {
